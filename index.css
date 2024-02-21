@@ -1,0 +1,326 @@
+*{
+    margin: 0px;
+    outline: none;
+    padding: none;
+    box-sizing:border-box;
+}
+
+
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-image: linear-gradient(to right ,#ac11d3, #e20e0eda , #0f0f0f);
+    background-size: 200% 100%;
+    background-position: 0% 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+
+
+.ques{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    background-color: #fff;
+    position: absolute;
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
+    backdrop-filter: blur(20px);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding:10px;
+    flex-direction: column;
+    height: 100vh;
+    width: 50%;
+    z-index: 100;
+    
+    transition: all 0.2s ease-in-out;
+
+}
+
+.ques > img{
+    height: 300px;
+    border-radius: 10%;
+    transition: all 0.6s ease-in-out;
+}
+
+.ques > img:hover{
+    box-shadow: 3px 3px 15px 1px #0f0f0f;
+}
+.ques:hover{
+    background-color: blueviolet;
+    color: whitesmoke;
+}
+.ques > label > i{
+    scale: 5;
+    margin: 50px;
+    transition: all 0.2s ease-in-out;
+
+}
+.ques >label> i:hover{
+    scale: 5;
+    margin: 50px;
+    color: #49d0f2;
+
+}
+.ques > span{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serifs;
+    font-size: 2.9rem;
+    
+}
+.login , .signup{
+    position: absolute;
+    top: 50%;
+    left:75%;
+    transform: translate(-50%,-50%);
+    background-image: url("https://img.freepik.com/free-photo/ultra-detailed-nebula-abstract-wallpaper-4_1562-749.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    width: 400px;
+    min-width: 320px;
+    border-radius: 30px;
+}
+
+.loginform , .signupform{
+    position: relative;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    padding: 15px;
+    background: transparent;
+
+}
+
+.loginform > input, .signupform > input{
+    border: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    font-size: 1.05rem;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+}
+input:hover{
+    box-shadow: 0px 1px 10px 1px #fff;
+
+}
+
+.loginform > input::placeholder , .signupform> input::placeholder {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    color: white;
+
+}
+.btn{
+    width: 150px;
+    padding: 4px 0px;
+    border-radius: 4px;
+    border:none;
+    background-image: linear-gradient();
+}
+.btn{
+
+    border-radius: 5px;
+    border: none;
+    padding: 5px 0px;
+    outline: none;
+    width: 150px;
+    color: white;
+    font-size: 1rem;
+    background-image: linear-gradient(to right, #e433af , #49d0f2, #a85ea2);
+    background-size: 380px 50px;
+    background-position: 0%;
+    transition: all 0.15s ease-in-out;
+    box-shadow: 0px 0px 0px 0px #fff;
+}
+.btn:hover{
+    scale: 1.02;
+    background-position: 100%;
+    box-shadow: 0px 1px 15px 1px #90b7d5;
+}
+
+.btn:active{
+    background-position: 0%;
+    scale: 0.8;
+}
+.loginform > p,.signupform > p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.8rem;
+    transform: scale(1.1);
+    transition: all 0.6 ease-in-out;
+}
+.loginform > p:hover, .signupform > p:hover{
+    background:linear-gradient(to right , #4559bb , #e518d4);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    scale: 1.02;
+    
+    letter-spacing: 3px;
+}
+.span2 i{
+    margin:15px;
+    margin-top: 8px;
+    scale: 1.5;
+    color:blueviolet;    
+    transition: all 0.1s ease-in-out;
+    }
+
+.span2 i:hover{
+    
+    color: rgb(29, 78, 192);
+    scale: 1.8;
+    }
+
+
+    .signup{
+        position: absolute;
+        top: 50%;
+        left:0%;
+        transform: translate(10%,-50%);
+        background-color: #ccc;
+        width: 400px;
+        min-width: 320px;
+        border-radius: 30px;
+    }
+    
+    .signupform{
+        position: relative;
+        display: flex;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+        padding: 15px;
+    
+    }
+
+
+
+@keyframes login-to-signup {
+    25%{
+        width: 60%;
+    }
+
+    50%{
+        
+        border-radius: 0%;
+        
+    }
+    
+    100%{
+        transform: translate(100%,0%);
+        border-radius: 0px;
+        border-top-left-radius: 25%;
+        border-bottom-left-radius: 25%;
+    }
+}
+
+@keyframes signup-to-login {
+    0%{
+        transform: translate(100%,0%);
+    }
+
+    25%{
+        
+        width: 50%;
+    }
+
+    50%{
+        border-radius: 35%;
+        
+    }
+    
+    100%{
+        transform: translate(0%,0%);
+        border-radius: 0px;
+        border-top-right-radius: 25%;
+        border-bottom-right-radius: 25%;
+    }
+}
+
+.login{
+    animation: none;
+}
+@keyframes login-frame-animation1 {
+    to{
+        transform: translate(-200%,-50%);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes login-frame-animation2 {
+
+        from{
+            transform: translate(-250%,-50%) rotateY(360deg);
+            opacity: 0;
+            display: none;
+            scale: 0.4;
+            
+        }
+
+
+    to{
+        transform: translate(-50%,-50%)  rotateY(0deg);
+        opacity: 1;
+        scale: 1;
+        display: inline;
+        box-shadow: 3px 10px 20px 2px #0f0f0f;
+        border: 3px solid blueviolet;
+    }
+}
+
+
+
+.signup{
+    animation: none;
+}
+
+@keyframes register-frame-animation1 {
+    from{
+        transform: translate(200%,-50%);
+        opacity: 0;
+        scale: 0.5;
+        display: none;
+        box-shadow: none;
+    }
+    to{
+        transform: translate(50%,-50%) rotateY(360deg);
+        opacity: 1;
+        display: inline;
+        scale: 1;
+        box-shadow: 3px 10px 25px 2px #0f0f0f;
+        border: 4px solid blueviolet;
+    }
+}
+
+@keyframes register-frame-animation2 {
+    from{
+        transform: translate(200%,-50%) rotateY(360deg);
+        opacity: 1;
+        display: inline;
+        scale: 1;
+        box-shadow:  3px 10px 25px 2px #0f0f0f;;
+        border: 3px solid pink;
+    }
+
+
+    to{
+        transform: translate(50%,-50%);
+        opacity:0;
+        scale: 0.5;
+        display: none;
+
+        box-shadow:none;
+    }
+
+}
+
+
